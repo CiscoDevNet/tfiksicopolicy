@@ -88,16 +88,14 @@ module "network" {
 #  version          = "1.0.1"
 #}
 
-module "k8s_version_1-19-5" {
-  source         = "terraform-cisco-modules/iks/intersight//modules/version"
-  version = "2.1.2"
-  policyName     = "1.19.5"
-  iksVersionName = local.k8s_version_name
-
+module "version_1-19-15-iks3" {
+  source           = "terraform-cisco-modules/iks/intersight//modules/version"
+  version = "=2.1.2"
+  policyName     = "1.19.15-iks.3"
+  iksVersionName = "1.19.15-iks.3"
   org_name = local.organization
 #  tags     = var.tags
-}
-
+} 
 data "intersight_organization_organization" "organization" {
   name = local.organization
 }
