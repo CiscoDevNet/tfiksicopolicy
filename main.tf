@@ -81,8 +81,6 @@ module "network" {
 
 module "k8s_version" {
   source           = "terraform-cisco-modules/iks/intersight//modules/version"
-  k8s_version      = local.k8s_version 
-  k8s_version_name = local.k8s_version_name 
   policyName     = local.k8s_version_name
   iksVersionName = local.k8s_version
   org_name = local.organization
