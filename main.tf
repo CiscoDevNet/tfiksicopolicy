@@ -113,7 +113,9 @@ resource "intersight_kubernetes_virtual_machine_instance_type" "masterinstance" 
   }
 }
 
-
+output "ver" {
+    value = local.k8s_version
+}
 
 locals {
   masterinstance = yamldecode(data.terraform_remote_state.global.outputs.masterinstance)
