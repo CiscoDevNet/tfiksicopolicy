@@ -83,7 +83,8 @@ module "k8s_version" {
   source           = "terraform-cisco-modules/iks/intersight//modules/version"
   policyName     = local.k8s_version_name
 #  iksVersionName = local.k8s_version
-  iksVersionName = "1.21.11-iks.2"
+  #iksVersionName = "1.21.11-iks.2"
+  iksVersionName = "1.21.10-iks.0"
   org_name = local.organization
   version = "=2.1.2"
 }
